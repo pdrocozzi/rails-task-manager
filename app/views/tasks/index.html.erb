@@ -1,0 +1,25 @@
+<h1>Tasklist</h1>
+
+<% @tasks.each do |task| %>
+  <div>
+    <% if task.completed %>
+      <input type="checkbox" checked disabled>
+    <% else %>
+      <input type="checkbox" disabled>
+    <% end %>
+
+    <%= link_to task.title, task_path(task) %>
+
+    <!-- Edit link -->
+    <%= link_to "📝", edit_task_path(task) %>
+
+    <!-- Delete link with confirmation -->
+    <%= link_to "🗑️",
+                task_path(task),
+                data: { turbo_method: :delete, turbo_confirm: "Sure?" } %>
+  </div>
+<% end %>
+
+<p>
+  <%= link_to "+ New task", new_task_path %>
+</p>

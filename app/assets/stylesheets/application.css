@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+ .tasks-list {
+  margin-bottom: 20px;
+}
+
+.task-item {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.task-title {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.task-actions {
+  margin-left: 10px;
+}
+
+.edit-link, .delete-link {
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.add-task-link {
+  color: #0d6efd;
+  text-decoration: none;
+}
